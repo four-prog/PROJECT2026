@@ -1,4 +1,5 @@
 Flask
 mysql-connector-python
 requests
+gunicorn
 #pip install -r requirements.txt
