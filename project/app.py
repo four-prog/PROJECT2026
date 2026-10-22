@@ -12,7 +12,8 @@ db=mysql.connector.connect(
     user="avnadmin",
     password="AVNS_vKXV37n4YtvusG8hhfQ",
     database="project",
-    port="27573"
+    port=27573,
+    connection_timeout=10
     
 )
 if db.is_connected:
@@ -144,29 +145,43 @@ def show():
 
 
 
-@app.route('/logined',methods=['POST'])
+@app.route('/logined', methods=['POST'])
 def logined():
-    id=request.form['email']
-    password=request.form['password']
-    result1=(id,password)
-    cursor=db.cursor()
+    email = request.form['email']
+    password = request.form['password']
 
-    sql="SELECT*FROM auth WHERE EMAIL=%s"
-    value=(id,)
-    
-    cursor.execute(sql,value)
-   
-    result=cursor.fetchone()
+    conn = None
+    cursor = None
 
-    cursor.close()
+    try:
+        conn = get_db_connection()
+        cursor = conn.cursor()
 
-    print(result)
-    if result==result1:
-           return redirect('/home')
-    elif result is None:
-         return "not registered"
-    else:
+        cursor.execute(
+            "SELECT * FROM auth WHERE EMAIL = %s",
+            (email,)
+        )
+
+        result = cursor.fetchone()
+
+        if result is None:
+            return "Not registered"
+
+        if result[1] == password:
+            return redirect('/home')
+
         return render_template('failed.html')
+
+    except mysql.connector.Error:
+        app.logger.exception("Login database error")
+        return "Database connection error. Please try again later.", 503
+
+    finally:
+        if cursor is not None:
+            cursor.close()
+
+        if conn is not None and conn.is_connected():
+            conn.close()
 
 
 @app.route('/home')
