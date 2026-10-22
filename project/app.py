@@ -22,15 +22,6 @@ else:
 
 
 #MSG CONNECTION
-url = ""
-
-headers = {
-
-
-
-
-}
-
 
 #REGISTER PAGE
 @app.route('/')
