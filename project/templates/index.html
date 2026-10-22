@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="icon" type="image/png" href="static/images/Untitled-design1.png">
+</head>
+<body>
+    <h2>datas</h2>
+    <table border="1">
+    <tr>
+        <th>MAIL ID</th>
+        <th>PASS</th>
+    
+    </tr>
+    {% for results in result %}
+    <tr>
+        <td>{{results[0]}}</td>
+        <td>{{results[1]}}</td>
+    </tr>
+    {% endfor %}
+    </table>
+</body>
+</html>

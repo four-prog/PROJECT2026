@@ -1,0 +1,27 @@
+<html>
+    <title>DELETE STUDENT</title>
+    <link rel="stylesheet" href="./delete.css">
+    <link rel="icon" type="image/png" href="static/images/Untitled-design1.png">
+    <body>
+        <link rel="stylesheet"
+          href="{{ url_for('static', filename='delete.css') }}">
+        <div class="container">
+<div class="card delete-card">
+
+    <h2>Delete Student</h2>
+    <br>
+
+    <form class="delete-form" action="/deleted" method="POST">
+
+        <input type="text" placeholder="Register Number" required name="regno">
+
+        <button type="SUBMIT" class="delete-btn">
+            🗑️ Delete Student
+        </button>
+
+    </form>
+
+</div>
+</div>
+</body>
+</html>

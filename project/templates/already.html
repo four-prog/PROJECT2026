@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Already Registered</title>
+    <link rel="stylesheet" href="./already.css">
+    <link rel="icon" type="image/png" href="static/images/Untitled-design1.png">
+</head>
+<body>
+    
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='already.css') }}">
+
+    <div class="container">
+        <div class="card">
+            <div class="icon">✓</div>
+
+            <h1>Already Registered!</h1>
+
+            <p>
+                This Gmail account has already been registered.
+                Please log in using your existing account.
+            </p>
+
+            <a href="/login" class="btn">Go to Login</a>
+        </div>
+    </div>
+
+</body>
+</html>

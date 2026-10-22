@@ -1,0 +1,121 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Segoe UI',sans-serif;
+}
+
+body{
+
+display:flex;
+justify-content:center;
+align-items:center;
+min-height:100vh;
+background:linear-gradient(135deg,#1d2333,#2c3248);
+overflow:hidden;
+color:white;
+}
+/* Floating circles */
+
+@keyframes float{
+50%{
+transform:translateY(-40px);
+}
+}
+/* Card */
+.success-card{
+width:430px;
+background:rgba(255,255,255,.08);
+backdrop-filter:blur(15px);
+border:1px solid rgba(255,255,255,.2);
+padding:40px;
+border-radius:25px;
+text-align:center;
+box-shadow:0 15px 40px rgba(0,0,0,.4);
+z-index:1;
+}
+/* Success Icon */
+.icon{
+width:100px;
+height:100px;
+margin:auto;
+border-radius:50%;
+background:#28c76f;
+display:flex;
+align-items:center;
+justify-content:center;
+animation:pop .6s ease;
+}
+.icon i{
+font-size:50px;
+color:white;
+}
+@keyframes pop{
+0%{
+transform:scale(0);
+}
+100%{
+transform:scale(1);
+}
+}
+h1{
+margin-top:25px;
+font-size:32px;
+}
+p{
+margin:15px 0 30px;
+color:#ddd;
+}
+.details{
+text-align:left;
+background:rgba(255,255,255,.06);
+padding:20px;
+border-radius:15px;
+margin-bottom:25px;
+}
+.details div{
+display:flex;
+justify-content:space-between;
+margin:15px 0;
+}
+.status{
+color:#00ff80;
+font-weight:bold;
+}
+.countdown{
+margin-bottom:25px;
+color:#ffc857;
+font-size:18px;
+}
+.buttons{
+display:flex;
+gap:15px;
+}
+.buttons button{
+flex:1;
+padding:14px;
+border:none;
+border-radius:10px;
+background:#ffb545;
+font-size:16px;
+font-weight:bold;
+cursor:pointer;
+transition:.3s;
+}
+.dashboard{
+background:#28c76f !important;
+color:white;
+}
+button:hover{
+transform:translateY(-4px);
+box-shadow:0 8px 20px rgba(0,0,0,.4);
+}
+@media(max-width:500px){
+.success-card{
+width:92%;
+padding:25px;
+}
+.buttons{
+flex-direction:column;
+}
+}

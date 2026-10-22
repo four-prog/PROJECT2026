@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SMS WEBSITE</title>
+<link rel="icon" type="image/png" href="static/images/Untitled-design1.png">
+<script src="{{ url_for('static', filename='home.js') }}"></script>
+</head>
+<body>
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='home.css') }}">
+<nav class="nav" aria-label="Primary">
+  <div class="nav-left">
+    <a href="/soon" class="logo">
+      <span class="dot"></span>
+      <span class="word">SMS</span>
+    </a>
+
+    <div class="links" id="links">
+      <div class="pill" id="pill"></div>
+      <a href="/soon" class="active" data-link>HOME</a>
+      <a href="/soon" data-link>Projects</a>
+      <a href="/soon" data-link>Library</a>
+      <a href="/soon" data-link>Reports</a>
+      <a href="/soon" data-link>Settings</a>
+    </div>
+  </div>
+
+
+  <div class="nav-right">
+    <button class="icon-btn" input type="text" aria-label="Search">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M21 21l-4.3-4.3"/></svg>
+    </button>
+    <button class="icon-btn" aria-label="Notifications, 3 unread">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M6 8a6 6 0 1 1 12 0c0 5 2 6 2 6H4s2-1 2-6"/><path d="M10 20a2 2 0 0 0 4 0"/></svg>
+      <span class="badge">3</span>
+    </button>
+    <div class="divider"></div>
+    <div class="avatar">SMS</div>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</nav>
+ 
+
+
+<div class="mobile-panel" id="mobilePanel">
+  <a href="/soon" class="active" data-mlink>Overview</a>
+  <a href="/soon" data-mlink>Projects</a>
+  <a href="/soon" data-mlink>Library</a>
+  <a href="/soon" data-mlink>Reports</a>
+  <a href="/soon" data-mlink>Settings</a>
+</div>
+<!-- Navbar -->
+<nav class="navbar">
+    <button class="menu-btn" onclick="toggleMenu()">☰</button>
+    <h2>DEPARTMENT</h2>
+</nav>
+
+<!-- Sidebar -->
+<aside class="sidebar" id="sidebar">
+    <h3>Menu</h3>
+    <a href="/soon">I.BSC.IT</a>
+    <a href="/soon">I.BSC.AI</a>
+    <a href="/soon">II.BSC.IT</a>
+    <a href="/soon">II.BSC.AI</a>
+    <a href="/table">III.BSC.IT</a>
+    <a href="/soon">III.BSC.AI</a>
+</aside>
+<script src="./script.js"></script>
+</body>
+</html>

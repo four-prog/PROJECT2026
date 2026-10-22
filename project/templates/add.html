@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Student Management</title>
+
+</head>
+<body>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='add.css') }}">
+
+<div class="container">
+
+<h1>STUDENT ADD AND DELETE</h1>
+
+<div class="card">
+
+<h2>Add Student</h2>
+<br>
+
+<form action="/added" method="POST">
+
+<input type="text" placeholder="Register Number" name="unumber" required>
+
+<input type="text" placeholder="Student Name" name="uname" required>
+
+<input type="tel" placeholder="Mobile Number" name="phone">
+
+<select required name="class">
+<option disabled selected>SELECT CLASS</option>
+<option>III-BSC.IT</option>
+</select>
+
+<button class="add-btn" type="submit">
+➕ Add Student
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+<script>
+        history.pushState(null, null, location.href);
+
+        window.onpopstate = function () {
+            window.location.href = "/table";
+        };
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:Arial, sans-serif;
+        }
+
+        body{
+            display:flex;
+            justify-content:center;
+            align-items:center;
+            height:100vh;
+            background:linear-gradient(135deg,#4CAF50,#2E8B57);
+        }
+
+        .success-box{
+            background:#fff;
+            padding:40px;
+            border-radius:15px;
+            text-align:center;
+            box-shadow:0 8px 20px rgba(0,0,0,0.2);
+            width:350px;
+        }
+
+        .tick{
+            font-size:70px;
+            color:#28a745;
+        }
+
+        h1{
+            color:#28a745;
+            margin:15px 0;
+        }
+
+        p{
+            color:#555;
+            margin-bottom:25px;
+        }
+
+        .btn{
+            display:inline-block;
+            text-decoration:none;
+            background:#28a745;
+            color:white;
+            padding:12px 25px;
+            border-radius:8px;
+            transition:0.3s;
+        }
+
+        .btn:hover{
+            background:#218838;
+        }
